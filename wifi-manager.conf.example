@@ -1,0 +1,5 @@
+# wifi-manager configuration
+# After changing the password, run: sudo systemctl restart wifi-manager
+
+PORT=8080
+PASSWORD=changeme

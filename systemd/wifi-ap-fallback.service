@@ -1,0 +1,8 @@
+[Unit]
+Description=Wi-Fi known-network / AP fallback check
+After=NetworkManager.service
+Wants=NetworkManager.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/wifi-ap-fallback.sh

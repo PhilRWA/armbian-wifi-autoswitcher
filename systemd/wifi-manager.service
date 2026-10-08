@@ -1,0 +1,15 @@
+[Unit]
+Description=Wi-Fi Manager web UI
+After=NetworkManager.service
+Wants=NetworkManager.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/wifi-manager.py
+Restart=on-failure
+RestartSec=5
+# Needs root to add/modify/delete NetworkManager connection profiles.
+User=root
+
+[Install]
+WantedBy=multi-user.target
